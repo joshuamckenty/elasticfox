@@ -1,35 +1,26 @@
 <?xml version="1.0"?>
-
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-
-  <Description about="urn:mozilla:install-manifest">
-    <em:id>{2204c510-88f3-11db-b606-0800200c9a66}</em:id>
-    <em:type>2</em:type>
-    <em:version>__VERSION__.__BUILD__</em:version>
-    <em:file resource="urn:mozilla:extension:file:ec2ui.jar"/>
-   
-    <!-- Target Application this extension can install into, 
-         with minimum and maximum supported versions. --> 
-    <em:targetApplication>
-      <Description>
-        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>1.5</em:minVersion>
-        <em:maxVersion>2.0.*</em:maxVersion>
-      </Description>
-    </em:targetApplication>
-
-    <!-- Front End MetaData -->
-    <em:name>EC2 UI</em:name>
-    <em:description>Simple FireFox extension providing a UI for Amazon EC2</em:description>
-    <em:creator>James Greenfield (icons originally by Ken Saunders http://www.mouserunner.com)</em:creator>
-    <em:homepageURL>http://ec2.amazonaws.com</em:homepageURL>
-    <em:updateURL>http://s3.amazonaws.com/ec2-downloads/ec2ui.rdf</em:updateURL>
-  </Description>
-
-  <Description about="urn:mozilla:extension:file:ec2ui.jar"
-                   em:package="content/ec2ui/"
-                   em:skin="skin/classic/ec2ui/">
-    <em:locale>locale/ec2ui/en-US/</em:locale>
-  </Description>
-</RDF>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:name="SpandexFox - Tighten up your Elastic Cloud"
+                   em:id="spandexfox@spandexfox.com"
+                   em:version="0.99"
+                   em:description="Manage your EC2 instances without going totally MAD"
+                   em:creator="JMC's hack on James Greenfield (icons originally by Ken Saunders http://www.mouserunner.com)"
+                   em:homepageURL="http://spandexfox.com"
+                   em:optionsURL="chrome://spandexfox/content/options.xul"
+                   em:updateURL="http://spandexfox.com/update.rdf"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/Qdlfen7tdcj5QlBnoTbsjt9unlc5fV4a4382tyyZPKaJv3eSM4PZXDbVbiPxV2AVut1coWY4tT/OERAx7xhbABPUA4z9HLupLYSTMdEEsj5QZW9bKg2qfBQQP7oFxq7MOaXX3587gMgegBh3iue9ZiWVyY+JOM9HOrFxSS1zJQIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$C6+5G"/>
+    <!-- <em:targetApplication RDF:resource="rdf:#$H6+5G"/> -->
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$C6+5G"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="1.5"
+                   em:maxVersion="4.0" />
+  <!-- <RDF:Description RDF:about="rdf:#$H6+5G"
+             em:id="{a463f10c-3994-11da-9945-000d60ca027b}"
+             em:minVersion="0.5"
+             em:maxVersion="2.0b3" /> -->
+</RDF:RDF>

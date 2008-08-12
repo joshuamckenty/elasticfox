@@ -1,1 +1,1 @@
-rm -f ec2ui.jar ; $JAVA_HOME/bin/jar cf ec2ui.jar content locale skin
+rm -f spandexfox.jar ; zip -9 -ur spandexfox.jar content locale skin -x \*/.\* -x xptgen
